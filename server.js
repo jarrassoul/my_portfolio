@@ -142,11 +142,11 @@ const portfolioData = {
             details: "Specialized in network security, digital forensics, and cyber threat analysis"
         },
         {
-            degree: "Bachelor of Science in Telecommunications Engineering",
+            degree: "Bachelor of Science in IT | Major: Networking and Telecommunication",
             school: "The Higher Institute of Accounting and Business Administration",
             school_link: "https://iscae.mr/",
-            location: "Rabat, Morocco", 
-            duration: "2018 – 2022",
+            location: "Nouakchott, Mauritania", 
+            duration: "September 2013 – June 2016",
             details: "Focus on network infrastructure, RF engineering, and telecommunications systems"
         }
     ]
