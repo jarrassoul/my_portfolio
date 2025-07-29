@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= portfolio.personal.name %> - Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home"><%= portfolio.personal.name %></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight"><%= portfolio.personal.name %></span>
+                </h1>
+                <p class="hero-subtitle"><%= portfolio.personal.title %></p>
+                <p class="hero-description"><%= portfolio.about %></p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="<%= portfolio.personal.github %>" target="_blank" class="btn btn-secondary">View GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><%= portfolio.about %></p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <ul class="skills-list">
+                            <% portfolio.skills.technical.forEach(skill => { %>
+                                <li><%= skill %></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <ul class="skills-list">
+                            <% portfolio.skills.tools.forEach(tool => { %>
+                                <li><%= tool %></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <% portfolio.experience.forEach(job => { %>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 class="job-title"><%= job.title %></h3>
+                            <h4 class="company"><%= job.company %></h4>
+                            <p class="duration"><%= job.duration %> • <%= job.location %></p>
+                            <ul class="responsibilities">
+                                <% job.responsibilities.forEach(responsibility => { %>
+                                    <li><%= responsibility %></li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <% portfolio.projects.forEach(project => { %>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title"><%= project.title %></h3>
+                            <p class="project-description"><%= project.description %></p>
+                            <div class="project-technologies">
+                                <% project.technologies.forEach(tech => { %>
+                                    <span class="tech-tag"><%= tech %></span>
+                                <% }); %>
+                            </div>
+                            <ul class="project-achievements">
+                                <% project.achievements.forEach(achievement => { %>
+                                    <li><%= achievement %></li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <% portfolio.education.forEach(edu => { %>
+                    <div class="education-card">
+                        <h3 class="degree"><%= edu.degree %></h3>
+                        <h4 class="school"><%= edu.school %></h4>
+                        <p class="education-duration"><%= edu.duration %> • <%= edu.location %></p>
+                        <p class="education-details"><%= edu.details %></p>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="contact-description">
+                    I'm always interested in new opportunities and collaborations. 
+                    Feel free to reach out if you'd like to discuss potential projects or opportunities.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong> 
+                        <a href="mailto:<%= portfolio.personal.email %>"><%= portfolio.personal.email %></a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> 
+                        <a href="tel:<%= portfolio.personal.phone %>"><%= portfolio.personal.phone %></a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> <%= portfolio.personal.location %>
+                    </div>
+                    <div class="contact-item">
+                        <strong>GitHub:</strong> 
+                        <a href="<%= portfolio.personal.github %>" target="_blank">github.com/jarrassoul</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> 
+                        <a href="<%= portfolio.personal.linkedin %>" target="_blank">linkedin.com/in/ahmed-jar-rassoul</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 <%= portfolio.personal.name %>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
