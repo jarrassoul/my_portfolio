@@ -37,9 +37,9 @@ const portfolioData = {
     personal: {
         name: "Ahmed Jar Rassoul",
         title: "Network Engineer & Cybersecurity Analyst",
-        email: "jarrassoul@students.jkuat.ac.ke",
-        phone: "+212 625 35 69 32",
-        location: "Rabat, Morocco",
+        email: "jarrassoul@gomail.com",
+        phone: "(215) 201-7364",
+        location: "Philadelphia, USA",
         github: "https://github.com/jarrassoul",
         linkedin: "https://linkedin.com/in/ahmed-jar-rassoul"
     },
