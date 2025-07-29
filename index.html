@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHMED JAR RASSOUL - Portfolio</title>
+    <meta name="description" content="Master's candidate in Cybersecurity with expertise in network engineering, cybersecurity, and telecommunications. Passionate about optimizing network infrastructure and developing secure, scalable solutions.">
+    <meta name="keywords" content="network engineer, cybersecurity analyst, telecommunications, portfolio">
+    <meta name="author" content="AHMED JAR RASSOUL">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="AHMED JAR RASSOUL - Portfolio">
+    <meta property="og:description" content="Master's candidate in Cybersecurity with expertise in network engineering, cybersecurity, and telecommunications. Passionate about optimizing network infrastructure and developing secure, scalable solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/jarrassoul/my_portfolio">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AHMED JAR RASSOUL - Portfolio">
+    <meta name="twitter:description" content="Master's candidate in Cybersecurity with expertise in network engineering, cybersecurity, and telecommunications.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-accent: #f1f5f9;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-primary);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            padding-top: 70px;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--bg-accent);
+            color: var(--text-secondary);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--bg-secondary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 80px;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            border: 4px solid var(--bg-primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-content {
+            background-color: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline-header h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .company {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .location, .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .timeline-achievements {
+            list-style: none;
+        }
+
+        .timeline-achievements li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .timeline-achievements li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            background-color: var(--bg-secondary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--bg-primary);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .project-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-header h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .project-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-highlights {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-highlights li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .project-highlights li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--bg-accent);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .education-card {
+            display: flex;
+            gap: 1.5rem;
+            background-color: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .education-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .education-info h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .institution {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .location, .date, .gpa, .major {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .certifications, .relevant-courses {
+            margin-bottom: 3rem;
+        }
+
+        .certifications h3, .relevant-courses h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background-color: var(--bg-primary);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cert-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-category {
+            background-color: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .course-category h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .course-category ul {
+            list-style: none;
+        }
+
+        .course-category li {
+            padding: 0.3rem 0;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .course-category li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--bg-secondary);
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .contact-methods {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-method i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-details {
+            text-align: left;
+        }
+
+        .contact-details h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-details a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--text-primary);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer .social-link {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .footer .social-link:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--bg-primary);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: var(--shadow-lg);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 1rem;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item {
+                padding-left: 50px;
+            }
+
+            .timeline-marker {
+                left: 5px;
+            }
+
+            .timeline-meta {
+                flex-direction: column;
+            }
+
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-details {
+                text-align: center;
+            }
+
+            .footer-content {
+                text-align: center;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline-content {
+                padding: 1.5rem;
+            }
+
+            .project-card {
+                padding: 1.5rem;
+            }
+
+            .education-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">JAR</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">AHMED JAR RASSOUL</h1>
+                    <p class="hero-subtitle">Network Engineer & Cybersecurity Analyst</p>
+                    <p class="hero-description">
+                        Master's candidate in Cybersecurity with expertise in network engineering, cybersecurity, and telecommunications. Passionate about optimizing network infrastructure and developing secure, scalable solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#experience" class="btn btn-secondary">View Work</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="mailto:jarrassoul@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/ahmed-jarrassoul/" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/jarrassoul" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="tel:215-201-7364" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a Master's student in Cybersecurity at Drexel University with a strong background 
+                            in network engineering and cybersecurity. My experience spans from optimizing RF networks 
+                            for major telecom operators to implementing secure network infrastructures for financial institutions.
+                        </p>
+                        <p>
+                            With hands-on experience at companies like INWI and Huawei, I've developed expertise in 
+                            network optimization, security compliance, and telecommunications systems. I'm passionate 
+                            about leveraging technology to solve complex networking challenges and improve system performance.
+                        </p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Programming Languages</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">VB</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Computer Network</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">Routing</span>
+                                <span class="skill-tag">Switching</span>
+                                <span class="skill-tag">MPLS</span>
+                                <span class="skill-tag">VPN</span>
+                                <span class="skill-tag">TCP/IP</span>
+                                <span class="skill-tag">OSPF</span>
+                                <span class="skill-tag">DHCP</span>
+                                <span class="skill-tag">DNS</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Telecommunication</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">SIP</span>
+                                <span class="skill-tag">4G</span>
+                                <span class="skill-tag">FTTH</span>
+                                <span class="skill-tag">ADSL</span>
+                                <span class="skill-tag">RF Planning</span>
+                                <span class="skill-tag">VoIP</span>
+                                <span class="skill-tag">IMS</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Security</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">NIST Frameworks</span>
+                                <span class="skill-tag">Cryptography</span>
+                                <span class="skill-tag">PCI-DSS</span>
+                                <span class="skill-tag">SSL/TLS</span>
+                                <span class="skill-tag">HIPAA</span>
+                                <span class="skill-tag">GDPR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Network Engineer</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">INWI: Carrier Network Operator</span>
+                                    <span class="location">Casablanca, Morocco</span>
+                                    <span class="date">March 2024 - August 2024</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-achievements">
+                                <li>Engineered ADSL/FTTH test bed solutions to validate 100% compliance with functional requirements, resolving 15+ critical gaps between CPE software and ACS specifications, accelerating deployment timelines by 25%</li>
+                                <li>Automated CPE integration with auto-provisioning platforms, reducing manual configuration efforts by 40% and enabling seamless deployment of 1.6 million ADSL and over 900,000 devices across Morocco's broadband network</li>
+                                <li>Validated 10+ new fixed-service platforms (VoIP, IPTV) through rigorous QA testing, ensuring 100% compliance with SLA performance benchmarks</li>
+                                <li>Elevated network security compliance to 100% NIST SP 800-53 standards, reducing breach risks by 60% and driving a 20% improvement in customer retention</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Network Engineer Intern</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">Huawei Company</span>
+                                    <span class="location">Nouakchott, Mauritania</span>
+                                    <span class="date">June 2023 - November 2023</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-achievements">
+                                <li>Engineered Radio Frequency (RF) optimization strategies through systematic Drive Testing across 150+ cell sites, improving network KPIs (RSSI, SINR) by 35%</li>
+                                <li>Automated analysis of Drive Test logs using Genex Assistant, identifying 40+ interference patterns and optimizing handover success rates by 22%</li>
+                                <li>Resolved more than 100 cross-connection and interference issues at cell sites through RF parameter tuning, boosting signal quality by 40%</li>
+                                <li>Trained and certified 25+ subcontractor technicians on Single Site Verification (SSV) protocols, reducing field reporting errors by 60%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Network Engineer Manager</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">Smart-Solutions Company</span>
+                                    <span class="location">Nouakchott, Mauritania</span>
+                                    <span class="date">January 2017 - February 2019</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-achievements">
+                                <li>Trained and supervised a team of 12 technicians, improving workflow efficiency by 20% and reducing equipment downtime by 35%</li>
+                                <li>Collaborated cross-functionally with IT, field teams, and finance departments to validate data accuracy and align reporting metrics with organizational KPIs</li>
+                                <li>Orchestrated end-to-end project management for 15+ technical installations, delivering all projects 2 weeks ahead of schedule and 12% under budget</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Part Time Lecturer</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">Jomo Kenyatta University</span>
+                                    <span class="location">Nairobi, Kenya</span>
+                                    <span class="date">April 2022 - August 2022</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-achievements">
+                                <li>Taught relational database design (MySQL, SQL) and NoSQL systems (Oracle), emphasizing normalization, indexing, and ACID compliance</li>
+                                <li>Mentored teams to design ER diagrams and optimize SQL queries, leading to a 25% increase in average project scores</li>
+                                <li>Delivered lectures on computer networking principles, achieving a 70% success rate in CCNA trial exam</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>CPE Test: CPE Compatibility and Optimization Testing for Inwi ACS</h3>
+                            <span class="project-date">April 2024 – June 2024</span>
+                        </div>
+                        <div class="project-content">
+                            <p>Comprehensive testing protocols for Huawei and ZTE CPEs to ensure full compatibility with Inwi ACS.</p>
+                            <ul class="project-highlights">
+                                <li>Identified and addressed over 20 critical compatibility issues</li>
+                                <li>Streamlined automated billing processes by 30%</li>
+                                <li>Optimized band steering for enhanced user experience</li>
+                                <li>Reduced setup time and operational costs by 25%</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span class="tag">Network Testing</span>
+                                <span class="tag">CPE Integration</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Radio Frequency: Network Optimization Project (MATTEL)</h3>
+                            <span class="project-date">September 2023 – November 2023</span>
+                        </div>
+                        <div class="project-content">
+                            <p>End-to-end Drive Test and Single Site Verification campaigns using Huawei Genex assistant and QGIS software.</p>
+                            <ul class="project-highlights">
+                                <li>Achieved 25% uplift in user throughput</li>
+                                <li>35% decrease in dropped calls</li>
+                                <li>20% improvement in LTE RRC success rates</li>
+                                <li>Improved overall coverage reliability by 90%</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span class="tag">RF Optimization</span>
+                                <span class="tag">Drive Testing</span>
+                                <span class="tag">Network Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>Wireless: Wi-Fi Solution Implementation (MAURITRAC)</h3>
+                            <span class="project-date">February 2018 – March 2018</span>
+                        </div>
+                        <div class="project-content">
+                            <p>Comprehensive site surveys and VLAN-segmented SSID architecture implementation.</p>
+                            <ul class="project-highlights">
+                                <li>Reduced coverage gaps by 95%</li>
+                                <li>Maintained sub-50 ms latency for voice/video</li>
+                                <li>Reduced maintenance windows by 40%</li>
+                                <li>Cut mean time to detect network issues by 60%</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span class="tag">Wi-Fi</span>
+                                <span class="tag">Network Design</span>
+                                <span class="tag">SNMP Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>BLR Network: Implementing Intranet for a Bank</h3>
+                            <span class="project-date">March 2017 – May 2017</span>
+                        </div>
+                        <div class="project-content">
+                            <p>Secure MPLS-over-Wireless backbone implementation for banking operations.</p>
+                            <ul class="project-highlights">
+                                <li>Minimized jitter to &lt;20 ms</li>
+                                <li>50% reduction in issue resolution times</li>
+                                <li>98% adoption rate within months</li>
+                                <li>Segmented traffic for ATM, core banking, and VoIP</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span class="tag">MPLS</span>
+                                <span class="tag">Banking Systems</span>
+                                <span class="tag">Network Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <div class="container">
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="education-content">
+                    <div class="education-grid">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>Master of Science in Cybersecurity</h3>
+                                <p class="institution">Drexel University, College of Electrical and Computer Engineering</p>
+                                <p class="location">Philadelphia, PA</p>
+                                <p class="date">Expected Graduation: June 2026</p>
+                                <p class="gpa">GPA: 3.14 / 4.0</p>
+                            </div>
+                        </div>
+
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>Bachelor of Science in IT</h3>
+                                <p class="institution">The Higher Institute of Accounting and Business Administration</p>
+                                <p class="location">Nouakchott, Mauritania</p>
+                                <p class="date">September 2013 - June 2016</p>
+                                <p class="major">Major: Networking and Telecommunication</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certifications">
+                        <h3>Professional Certifications</h3>
+                        <div class="cert-grid">
+                            <div class="cert-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>CCNP: Core Network</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>CCNA: Enterprise Networking, Security, and Automation</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Cybersecurity: Network Protection</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relevant-courses">
+                        <h3>Relevant Coursework</h3>
+                        <div class="courses-grid">
+                            <div class="course-category">
+                                <h4>Programming</h4>
+                                <ul>
+                                    <li>Basic System</li>
+                                    <li>Introduction to Programming</li>
+                                    <li>Machine Learning</li>
+                                </ul>
+                            </div>
+                            <div class="course-category">
+                                <h4>Networking</h4>
+                                <ul>
+                                    <li>Computer Network</li>
+                                    <li>Secure Network</li>
+                                </ul>
+                            </div>
+                            <div class="course-category">
+                                <h4>Cybersecurity</h4>
+                                <ul>
+                                    <li>Principle of Cybersecurity</li>
+                                    <li>Information Assurance</li>
+                                    <li>Web Security I</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always interested in discussing new opportunities, networking challenges, or potential collaborations. Feel free to reach out!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:jarrassoul@gmail.com">jarrassoul@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-details">
+                                    <h4>Phone</h4>
+                                    <a href="tel:215-201-7364">215-201-7364</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="fab fa-linkedin"></i>
+                                <div class="contact-details">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://linkedin.com/in/ahmed-jarrassoul/" target="_blank">linkedin.com/in/ahmed-jarrassoul/</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <div class="contact-details">
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/jarrassoul" target="_blank">github.com/jarrassoul</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 AHMED JAR RASSOUL. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="mailto:jarrassoul@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/ahmed-jarrassoul/" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/jarrassoul" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 70;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        const navbar = document.querySelector('.navbar');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Add/remove background based on scroll position
+            if (scrollTop > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        console.log('✅ Portfolio loaded successfully! 🚀');
+        console.log('Ahmed Jar Rassoul - Network Engineer & Cybersecurity Analyst');
+    </script>
+</body>
+</html>
