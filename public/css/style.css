@@ -478,19 +478,49 @@ section {
 /* Education Section */
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
 
 .education-card {
-    display: flex;
-    gap: 1.5rem;
     background-color: var(--bg-primary);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.education-card .degree {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.education-card .school {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.education-card .education-duration {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.education-card .education-details {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
 }
 
 .education-card:hover {
@@ -810,8 +840,16 @@ section {
     }
 
     .education-card {
-        flex-direction: column;
-        text-align: center;
+        padding: 1.5rem;
+        text-align: left;
+    }
+
+    .education-card .degree {
+        font-size: 1.2rem;
+    }
+
+    .education-card .school {
+        font-size: 1rem;
     }
 }
 
