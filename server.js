@@ -143,7 +143,8 @@ const portfolioData = {
         },
         {
             degree: "Bachelor of Science in Telecommunications Engineering",
-            school: "National Institute of Posts and Telecommunications (INPT)",
+            school: "The Higher Institute of Accounting and Business Administration",
+            school_link: "https://iscae.mr/",
             location: "Rabat, Morocco", 
             duration: "2018 – 2022",
             details: "Focus on network infrastructure, RF engineering, and telecommunications systems"

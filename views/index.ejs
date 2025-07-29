@@ -147,7 +147,13 @@
                 <% portfolio.education.forEach(edu => { %>
                     <div class="education-card">
                         <h3 class="degree"><%= edu.degree %></h3>
-                        <h4 class="school"><%= edu.school %></h4>
+                        <h4 class="school">
+                            <% if (edu.school_link) { %>
+                                <a href="<%= edu.school_link %>" target="_blank" rel="noopener noreferrer"><%= edu.school %></a>
+                            <% } else { %>
+                                <%= edu.school %>
+                            <% } %>
+                        </h4>
                         <p class="education-duration"><%= edu.duration %> • <%= edu.location %></p>
                         <p class="education-details"><%= edu.details %></p>
                     </div>
