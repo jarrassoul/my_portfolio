@@ -478,7 +478,7 @@ section {
 /* Education Section */
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -509,6 +509,7 @@ section {
     color: var(--primary-color);
     margin-bottom: 0.75rem;
     line-height: 1.3;
+    white-space: nowrap;
 }
 
 .education-card .school a {
@@ -871,6 +872,7 @@ section {
 
     .education-card .school {
         font-size: 1rem;
+        white-space: normal;
     }
 }
 
